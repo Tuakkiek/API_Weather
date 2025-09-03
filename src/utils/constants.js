@@ -1,3 +1,4 @@
+// constants.js
 export const cities = [
   { value: "Hanoi", label: "Hà Nội" },
   { value: "Ho Chi Minh", label: "TP. Hồ Chí Minh" },

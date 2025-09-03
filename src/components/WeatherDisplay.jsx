@@ -3,17 +3,14 @@ import { Box, Typography } from '@mui/material'; // Import các component cần 
 import WeatherInfo from './WeatherInfo'; // Import component WeatherInfo mới
 
 const WeatherDisplay = ({ weather }) => {
-  if (!weather) {
-    return null;
-  }
-
   return (
     <Box 
       sx={{ 
         p: 2, 
         border: '1px solid #e0e0e0', // Định dạng viền
         borderRadius: 2, // Bo góc
-        bgcolor: '#f5f5f5' // Màu nền
+        bgcolor: '#f5f5f5', // Màu nền
+  
       }}
     >
       <Typography variant="h5" gutterBottom>
@@ -32,7 +29,6 @@ const WeatherDisplay = ({ weather }) => {
         Cảm giác như: {weather.main.feels_like}°C
       </Typography>
 
-      {/* Tích hợp component WeatherInfo để hiển thị các chỉ số chi tiết */}
       <WeatherInfo weather={weather} />
     </Box>
   );

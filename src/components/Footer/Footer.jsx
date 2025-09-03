@@ -4,18 +4,16 @@ export function Footer() {
   return (
     <footer>
      <AppBar 
-        position="fixed"
+     position="static"
       component="footer"
-      sx={{
-        top: 'auto',
-        bottom: 0,
-        backgroundColor: "#090909ff",
-        height: "60px",
-        color: "#fdfd96",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+        sx={{
+          backgroundColor: "rgba(0,0,0,0.9)",
+          height: "60px",
+          color: "#fdfd96",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
      >
         <Typography variant="body2" sx={{ color: "#fdfd96" }}>
         © 2025 Weather App. All rights reserved.

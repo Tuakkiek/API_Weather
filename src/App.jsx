@@ -12,8 +12,12 @@ function App() {
   const [weather, setWeather] = useState(null);
 
   const getWeather = async () => {
-    const data = await fetchWeather(city);
-    setWeather(data);
+    if (city) {
+      const data = await fetchWeather(city);
+      setWeather(data);
+    } else {
+      alert("Vui lòng chọn một thành phố hợp lệ.");
+    }
   };
 
   return (
@@ -21,10 +25,19 @@ function App() {
       <Header />
       <Stack
         spacing={2}
-        sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+        // sx={{ minHeight: "100vh", display: "flex", flexDirection: "column",}}
       >
         <Banner />
-        <Container maxWidth="md" sx={{ flexGrow: 1, my: 4 }}>
+        <Container
+          maxWidth={false}
+          sx={{
+            flexGrow: 1,
+            my: 4,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <Box
             sx={{ p: 3, my: 3, border: "1px solid #e0e0e0", borderRadius: 2 }}
           >
@@ -37,7 +50,7 @@ function App() {
             <Button variant="contained" onClick={getWeather} sx={{ mt: 2 }}>
               Xem thời tiết
             </Button>
-            <WeatherDisplay weather={weather} />
+            {weather && <WeatherDisplay weather={weather} />}
           </Box>
         </Container>
         <Footer />
