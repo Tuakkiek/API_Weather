@@ -7,8 +7,7 @@ import { Banner } from "./components/Body/Banner";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Header/>
-    <Banner/>
+
     <App/>
 
   </StrictMode>

@@ -1,9 +1,8 @@
-const cities = [
+export const cities = [
   { value: "Hanoi", label: "Hà Nội" },
   { value: "Ho Chi Minh", label: "TP. Hồ Chí Minh" },
   { value: "Hai Phong", label: "Hải Phòng" },
   { value: "Da Nang", label: "Đà Nẵng" },
-  { value: "Can Tho", label: "Cần Thơ" },
   { value: "Hue", label: "Huế" },
   { value: "Vinh", label: "Vinh" },
   { value: "Bien Hoa", label: "Biên Hòa" },
@@ -65,4 +64,4 @@ const cities = [
   { value: "Bac Lieu", label: "Bạc Liêu" },
   { value: "Ca Mau", label: "Cà Mau" },
 ];
-export default cities;
+export const API_KEY = "022bc4eb98ba2192d16fa8286ed17a2f";
